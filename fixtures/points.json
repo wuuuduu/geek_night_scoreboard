@@ -1,0 +1,170 @@
+[
+  {
+    "model": "points.playermodel",
+    "pk": 1,
+    "fields": {
+      "username": "PLAYER_ONE",
+      "date_added": "2019-09-14T12:05:40.679Z"
+    }
+  },
+  {
+    "model": "points.playermodel",
+    "pk": 2,
+    "fields": {
+      "username": "PLAYER_THREE",
+      "date_added": "2019-09-14T12:06:11.079Z"
+    }
+  },
+  {
+    "model": "points.playermodel",
+    "pk": 3,
+    "fields": {
+      "username": "PLAYER_TWO",
+      "date_added": "2019-09-14T12:11:01.369Z"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 1,
+    "fields": {
+      "name": "INFORMERZY"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 2,
+    "fields": {
+      "name": "RZUT LAPTOPEM"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 3,
+    "fields": {
+      "name": "CURLING DYSKAMI"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 4,
+    "fields": {
+      "name": "FLAGI"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 5,
+    "fields": {
+      "name": "ZACISKANIE KABLA NA CZAS"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 6,
+    "fields": {
+      "name": "SPACER ADMINA"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 7,
+    "fields": {
+      "name": "PRELEKCYJNE PYTANIA"
+    }
+  },
+  {
+    "model": "points.typeofpointsmodel",
+    "pk": 8,
+    "fields": {
+      "name": "INNE"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 1,
+    "fields": {
+      "code": "Q123A13",
+      "value": 500,
+      "acquired_by_player": 2,
+      "type_of_points": 2,
+      "description": "I miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 2,
+    "fields": {
+      "code": "EQ123Q1",
+      "value": 400,
+      "acquired_by_player": 2,
+      "type_of_points": 1,
+      "description": "II miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 3,
+    "fields": {
+      "code": "DAS131R",
+      "value": 300,
+      "acquired_by_player": 3,
+      "type_of_points": 1,
+      "description": "III miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 4,
+    "fields": {
+      "code": "LKAQ311",
+      "value": 400,
+      "acquired_by_player": 1,
+      "type_of_points": 2,
+      "description": "II miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 5,
+    "fields": {
+      "code": "FXAD12",
+      "value": 500,
+      "acquired_by_player": 1,
+      "type_of_points": 1,
+      "description": "I miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 6,
+    "fields": {
+      "code": "312ASD",
+      "value": 600,
+      "acquired_by_player": 1,
+      "type_of_points": 3,
+      "description": "I miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 7,
+    "fields": {
+      "code": "XAS123",
+      "value": 500,
+      "acquired_by_player": 2,
+      "type_of_points": 3,
+      "description": "II miejsce"
+    }
+  },
+  {
+    "model": "points.pointmodel",
+    "pk": 8,
+    "fields": {
+      "code": "GHWQ1",
+      "value": 400,
+      "acquired_by_player": 1,
+      "type_of_points": 3,
+      "description": "III miejsce"
+    }
+  }
+]

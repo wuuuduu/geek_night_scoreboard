@@ -1,0 +1,39 @@
+{% load i18n %}
+{% if sponsors %}
+    <div class="container">
+        <div class="row">
+            <div class="col  ramka_borderowa_z_alpha">
+                <h2 class="text-center">{% trans 'Geek Night Sponsors' %}:</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div id="sponsorsCarousel" class="col carousel slide" data-ride="carousel">
+                <div class="carousel-inner text-center">
+                    {% for sponsor in sponsors %}
+                        <div style="min-height: 160px;" class="carousel-item{% if forloop.first %} active{% endif %} justify-content-center">
+                            <img style="max-height: 160px;" class="img-fluid justify-content-center"
+                                 src="{{sponsor.image.url}}" alt="{{ sponsor.description }}">
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#sponsorsCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#sponsorsCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: 1600
+        });
+    });
+</script>

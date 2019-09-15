@@ -1,0 +1,100 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b393632119.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    {% block additional_media %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body class="d-flex flex-column">
+<div id="page-content">
+    <div style="margin-top: 20px;" id="navbar" class="container">
+        <nav class="row navbar navbar-expand-md navbar-dark"
+             style="padding-right: 0px; padding-left: 0px;  margin-bottom: 15px; background-color: #222222; border-radius: 6px 6px 6px 6px; ">
+            <a href=""></a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                    data-target="#asdfnavbar" aria-controls="asdfnavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center " id="asdfnavbar">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase"
+                           href="{% url 'agenda:agenda_view' %}">{% trans 'Agenda' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase"
+                           href="{% url 'points:high_scores_view' %}">{% trans 'Highscores' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase"
+                           href="{% url 'points:add_points_view' %}">{% trans 'Enter code' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase"
+                           href="{% url 'pages:statute_view' %}">{% trans 'Statute' %}</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    {% include 'mixins/messages.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+{% include 'mixins/sponsors_carousel.html' %}
+
+<footer class="container-fluid  mt-5">
+    <div class="row author-row">
+        <div class="col-12 pb-2 pt-3 text-center">
+            <p class="footer-author-text">Made by <a class="footer-author-text" href="https://kornel.dev"
+                                                     target="_blank">
+                Kornel Kołbuk - www.kornel.dev</a> for Geek Night</p>
+
+            <p>
+                <a class="pl-3" href="https://github.com/wuuuduu" target="_blank">
+                    <i style="font-size:40px; color: whitesmoke;" class="fab fa-github"></i></a>
+                <a class="pl-3" href="https://pl.linkedin.com/in/kornel-ko%C5%82buk" target="_blank">
+                    <i style="font-size:40px; color: #007bff;" class="fab fa-linkedin"></i></a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    /* We are looking for the last entry in menu */
+    let active = undefined;
+    $('.nav-link').each(function (k, v) {
+        if (window.location.href.includes(v.href)) {
+            active = $(v);
+        }
+    });
+    if (active !== undefined) {
+        active.addClass('active')
+    }
+</script>
+
+{% block extra_js %}
+
+{% endblock %}
+
+</body>
+</html>

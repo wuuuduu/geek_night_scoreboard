@@ -1,0 +1,20 @@
+[
+  {
+    "model": "pages.cmspage",
+    "pk": 1,
+    "fields": {
+      "slug": "statute",
+      "public_content": "<object data=\"/media/public/regulamin.pdf\" height=\"100%\" style=\"min-height: 600px;\" type=\"application/pdf\" width=\"100%\">Regulamin</object>"
+    }
+  },
+  {
+    "model": "pages.sponsorscarousel",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "image": "sponsors/clug.png",
+      "description": "CLUG",
+      "visible": true
+    }
+  }
+]

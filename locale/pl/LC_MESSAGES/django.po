@@ -1,0 +1,840 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-15 01:07+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: agenda/admin.py:20 agenda/models.py:35
+msgid "Lectures"
+msgstr "Prelekcje"
+
+#: agenda/admin.py:34 agenda/admin.py:37 pages/admin.py:22 pages/admin.py:23
+msgid "Change"
+msgstr "Zmień"
+
+#: agenda/forms.py:21
+msgid "End date must be greater than start date."
+msgstr "Data zakończenia musi być większa od daty rozpoczęcia."
+
+#: agenda/models.py:17
+msgid "Room"
+msgstr "Sala"
+
+#: agenda/models.py:18
+msgid "Rooms"
+msgstr "Sale"
+
+#: agenda/models.py:34
+msgid "Lecture"
+msgstr "Prelekcja"
+
+#: pages/models.py:19
+msgid ""
+"The public url to the page, example: https://website.com/YOUR_SLUG_HERE/"
+msgstr ""
+"Publiczny link do strony, na przykład https://website.com/YOUR_SLUG_HERE/"
+
+#: points/filters.py:14
+msgid "Category"
+msgstr "Kategoria"
+
+#: points/filters.py:15
+msgid "OVERALL"
+msgstr "OGÓLNA"
+
+#: points/forms.py:16
+msgid "Your nick"
+msgstr "Twój nick"
+
+#: points/forms.py:22
+msgid "Code"
+msgstr "Kod"
+
+#: points/forms.py:35
+msgid "We are sorry, you have already used the entered code!"
+msgstr "Przepraszamy, wprowadzony kod został przez Ciebie już użyty!"
+
+#: points/forms.py:37
+msgid "We are sorry, the entered code is already used by someone else!"
+msgstr "Przepraszamy, wprowadzony kod został już użyty przez kogoś innego!"
+
+#: points/forms.py:39
+msgid "We are sorry, but the entered code is invalid! :("
+msgstr "Przeprasazmy, wprowadzony kod jest nieprawidłowy! :("
+
+#: points/models.py:16
+msgid "Player"
+msgstr "Gracz"
+
+#: points/models.py:17
+msgid "Players"
+msgstr "Gracze"
+
+#: points/models.py:50 points/models.py:51
+msgid "Points"
+msgstr "Punkty"
+
+#: points/views.py:28
+#, python-format
+msgid "We have added %s points to your score. Thank you!"
+msgstr "Dodaliśmy %s punktów do Twojego wyniku. Dziękujemy!"
+
+#: protected_files/admin.py:15 protected_files/admin.py:18
+msgid "EDIT"
+msgstr "EDYTUJ"
+
+#: protected_files/models.py:53
+#, fuzzy
+#| msgid "Profile"
+msgid "Protected file"
+msgstr "Profil"
+
+#: protected_files/models.py:54
+#, fuzzy
+#| msgid "Profile"
+msgid "Protected files"
+msgstr "Profil"
+
+#: protected_files/models.py:72
+#, fuzzy
+#| msgid "Your public profile"
+msgid "Public file"
+msgstr "Twój publiczny profil"
+
+#: protected_files/models.py:73
+#, fuzzy
+#| msgid "Your public profile"
+msgid "Public files"
+msgstr "Twój publiczny profil"
+
+#: protected_files/validators.py:40
+msgid "The maximum file size that can be uploaded is:"
+msgstr "Maksymalny rozmiar pliku to:"
+
+#: protected_files/validators.py:42
+msgid "Wrong content type"
+msgstr "Niedozwolony content type"
+
+#: protected_files/validators.py:44
+msgid "Wrong extension"
+msgstr "Niedozwolone rozszerzenie"
+
+#: templates/base.html:35
+msgid "Agenda"
+msgstr ""
+
+#: templates/base.html:39
+msgid "Highscores"
+msgstr ""
+
+#: templates/base.html:43
+msgid "Enter code"
+msgstr "Wpisz kod"
+
+#: templates/base.html:47
+msgid "Statute"
+msgstr "Regulamin"
+
+#: templates/highscores.html:15
+msgid "Submit"
+msgstr "Potwierdź"
+
+#: templates/mixins/sponsors_carousel.html:6
+msgid "Geek Night Sponsors"
+msgstr "Sponsorzy Nocy Informatyka"
+
+#~ msgid "First name"
+#~ msgstr "Imię"
+
+#~ msgid "Last name"
+#~ msgstr "Nazwisko"
+
+#~ msgid "GDPR"
+#~ msgstr "RODO"
+
+#~ msgid "Start date"
+#~ msgstr "Data rozpoczęcia"
+
+#~ msgid "End date"
+#~ msgstr "Data zakończenia"
+
+#~ msgid "E-mail address is wrong."
+#~ msgstr "Adres e-mail jest niedozwolony."
+
+#~ msgid "Please check DNS settings for given domain"
+#~ msgstr "Sprawdź ustawienia DNS dla podanej domeny"
+
+#~ msgid "Check MX"
+#~ msgstr "Sprawdź MX"
+
+#~ msgid "Scholar"
+#~ msgstr "Stypendysta"
+
+#~ msgid "Patron"
+#~ msgstr "Opiekun"
+
+#~ msgid "Administrator"
+#~ msgstr "Administrator"
+
+#~ msgid "Title"
+#~ msgstr "Tytuł"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid "Short description for scholars"
+#~ msgstr "Krótki opis dla stypendystów"
+
+#~ msgid "Mandatory event"
+#~ msgstr "Wydarzenie obowiązkowe"
+
+#~ msgid "Event published"
+#~ msgstr "Opublikowane wydarzenie"
+
+#~ msgid ""
+#~ "The public url to the event, example: https://website.com/event/"
+#~ "EVENT_SLUG_HERE/"
+#~ msgstr ""
+#~ "Publiczny link do wydarzenia, na przykład: https://website.com/event/"
+#~ "EVENT_SLUG_HERE/"
+
+#~ msgid "Event public page"
+#~ msgstr "Publiczna strona wydarzenia"
+
+#~ msgid "Public content about event"
+#~ msgstr "Publiczna treść o wydarzeniu"
+
+#~ msgid "Message"
+#~ msgstr "Wiadomość"
+
+#~ msgid "Presence"
+#~ msgstr "Obecność"
+
+#~ msgid "Excused absence"
+#~ msgstr "Usprawiedliwona nieobecność"
+
+#~ msgid "Short description"
+#~ msgstr "Krótki opis"
+
+#~ msgid "Long description"
+#~ msgstr "Opis szczegółowy"
+
+#~ msgid "hidden"
+#~ msgstr "ukryty"
+
+#~ msgid "Your join request is being processed"
+#~ msgstr "Twoja prośba o dołączenie jest przetwarzana"
+
+#~ msgid "You successfully left the team."
+#~ msgstr "Opuszczenie grupy zakończone powodzeniem."
+
+#~ msgid "join request has been accepted"
+#~ msgstr "prośba o przyjęcie została zaakceptowana"
+
+#~ msgid "join request has been rejected"
+#~ msgstr "prośba o przyjęcie została odrzucona"
+
+#~ msgid "has been removed from the team"
+#~ msgstr "został usunięty z grupy"
+
+#~ msgid "Account"
+#~ msgstr "Konto"
+
+#~ msgid "E-mail Addresses"
+#~ msgstr "Adresy e-mail"
+
+#~ msgid "The following e-mail addresses are associated with your account:"
+#~ msgstr "Następujące adresy e-mail są związane z Twoim kontem:"
+
+#~ msgid "Verified"
+#~ msgstr "Zweryfikowany"
+
+#~ msgid "Unverified"
+#~ msgstr "Niezweryfikowany"
+
+#~ msgid "Primary"
+#~ msgstr "Główny"
+
+#~ msgid "Make Primary"
+#~ msgstr "Ustaw głównym"
+
+#~ msgid "Re-send Verification"
+#~ msgstr "Wyślij ponownie e-mail weryfikacyjny"
+
+#~ msgid "Remove"
+#~ msgstr "Usuń"
+
+#~ msgid "Warning:"
+#~ msgstr "Ostrzeżenie:"
+
+#~ msgid ""
+#~ "You currently do not have any e-mail address set up. You should really "
+#~ "add an e-mail address so you can receive notifications, reset your "
+#~ "password, etc."
+#~ msgstr ""
+#~ "Obecnie nie masz przypisanego żadnego adresu e-mail. Jeżeli chcesz "
+#~ "otrzymywać powiadomienia, restartować hasło, itp. to dodaj adres e-mail."
+
+#~ msgid "Add E-mail Address"
+#~ msgstr "Dodaj adres e-email"
+
+#~ msgid "Add E-mail"
+#~ msgstr "Dodaj E-mail"
+
+#~ msgid "Do you really want to remove the selected e-mail address?"
+#~ msgstr "Czy na pewno chcesz usunąć zaznaczony adres e-mail?"
+
+#~ msgid "Confirm E-mail Address"
+#~ msgstr "Potwierdź adres e-mail"
+
+#~ msgid ""
+#~ "Please confirm that\n"
+#~ "                            <a href=\"mailto:%(email)s\">%(email)s</a> is "
+#~ "an e-mail address for user\n"
+#~ "                            %(user_display)s.\n"
+#~ "                        "
+#~ msgstr ""
+#~ "Prosimy, potwierdź, że adres e-mail\n"
+#~ "                <a href=\"mailto:%(email)s\">%(email)s</a> będzie należeć "
+#~ "do użytkownika %(user_display)s.\n"
+#~ "            "
+
+#~ msgid "Confirm"
+#~ msgstr "Potwierdź"
+
+#~ msgid ""
+#~ "This e-mail confirmation link expired or is invalid. Please\n"
+#~ "                        <a href=\"%(email_url)s\">issue a new e-mail "
+#~ "confirmation request</a>."
+#~ msgstr ""
+#~ "Link do potwierdzenia e-mail wygasł lub jest nieprawidłowy.\n"
+#~ "            <a href=\"%(email_url)s\">Wyślij nową prośbę o potwierdzenie "
+#~ "e-mail</a>."
+
+#~ msgid "Sign In"
+#~ msgstr "Zaloguj się"
+
+#~ msgid "Please sign in with one of your existing third party accounts"
+#~ msgstr "Uzyj konta społecznościowego do zalogowania"
+
+#~ msgid "or"
+#~ msgstr "lub"
+
+#~ msgid ""
+#~ "If you have not created an account yet, then please\n"
+#~ "                        <a href=\"%(signup_url)s\">sign up</a> first."
+#~ msgstr ""
+#~ "Jeżeli nie masz jeszcze konta, to\n"
+#~ "            <a href=\"%(signup_url)s\">zarejestruj się</a>."
+
+#~ msgid "Forgot Password?"
+#~ msgstr "Zapomniałeś hasła?"
+
+#~ msgid "Sign Out"
+#~ msgstr "Wyloguj się"
+
+#~ msgid "Are you sure you want to sign out?"
+#~ msgstr "Czy jesteś pewny, że chcesz się wylogować?"
+
+#~ msgid "Change Password"
+#~ msgstr "Zmień hasło"
+
+#~ msgid "Password Reset"
+#~ msgstr "Zresetowanie hasła"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll send "
+#~ "you an e-mail allowing you to reset it."
+#~ msgstr ""
+#~ "Nie pamiętasz hasła? Wprowadź Twój adres e-mail, a my wyślemy Ci "
+#~ "wiadomość e-mail, dzięki której zmienisz hasło."
+
+#~ msgid "Reset My Password"
+#~ msgstr "Zresetuj moje hasło"
+
+#~ msgid ""
+#~ "Please contact us if you have any trouble resetting your\n"
+#~ "                    password."
+#~ msgstr ""
+#~ "Skontaktuj się z nami jeżeli masz jakieś problemy z resetowaniem Twojego "
+#~ "hasła."
+
+#~ msgid "Bad Token"
+#~ msgstr "Zły token"
+
+#~ msgid ""
+#~ "The password reset link was invalid, possibly because it has already been "
+#~ "used.\n"
+#~ "                        Please request a <a href=\"%(passwd_reset_url)s"
+#~ "\">new password reset</a>."
+#~ msgstr ""
+#~ "Link do zresetowania hasła jest nieprawidłowy, możliwe, że został już "
+#~ "użyty. Poproś o <a href=\"%(passwd_reset_url)s\">zresetowanie Twojego "
+#~ "hasła</a>."
+
+#~ msgid "change password"
+#~ msgstr "zmień hasło"
+
+#~ msgid "Your password is now changed."
+#~ msgstr "Twoje hasło zostało zmienione."
+
+#~ msgid "Home"
+#~ msgstr "Strona główna"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendarz"
+
+#~ msgid "My teams"
+#~ msgstr "Moje grupy"
+
+#~ msgid "All teams"
+#~ msgstr "Wszystkie grupy"
+
+#~ msgid "Your e-mail addresses"
+#~ msgstr "Twoje adresy e-mail"
+
+#~ msgid "Change password"
+#~ msgstr "Zmień hasło"
+
+#~ msgid "Social accounts connections"
+#~ msgstr "Połączenia z kontami społecznościowymi"
+
+#~ msgid "Add a team"
+#~ msgstr "Dodaj grupę"
+
+#~ msgid "Add an event"
+#~ msgstr "Dodaj wydarzenie"
+
+#~ msgid "Sign out"
+#~ msgstr "Wyloguj się"
+
+#~ msgid "Sign Up"
+#~ msgstr "Zarejestruj się"
+
+#~ msgid ""
+#~ "Already have an account? Then please\n"
+#~ "                    <a href=\"%(login_url)s\">sign in</a>."
+#~ msgstr ""
+#~ "Posiadasz już konto? To\n"
+#~ "            <a href=\"%(login_url)s\">zaloguj się</a>."
+
+#~ msgid "Cracow Community"
+#~ msgstr "Wspólnota Krakowska"
+
+#~ msgid "Sponsors"
+#~ msgstr "Sponsorzy"
+
+#~ msgid "Download"
+#~ msgstr "Do pobrania"
+
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
+
+#~ msgid "Sign in"
+#~ msgstr "Zaloguj się"
+
+#~ msgid "Create the event"
+#~ msgstr "Utwórz wydarzenie"
+
+#~ msgid "Create"
+#~ msgstr "Utwórz"
+
+#~ msgid "Delete the event"
+#~ msgstr "Usuń wydarzenie"
+
+#~ msgid "Are you sure you want to delete this event?"
+#~ msgstr "Czy jesteś pewny, że chcesz usunąć to wydarzenie?"
+
+#~ msgid "Event"
+#~ msgstr "Wydarzenie"
+
+#~ msgid "Activity management"
+#~ msgstr "Zarządzanie aktywnością"
+
+#~ msgid "Do not forget to save changes!"
+#~ msgstr "Nie zapomnij zapisać zmian!"
+
+#~ msgid "Username"
+#~ msgstr "Nazwa użytkownika"
+
+#~ msgid "Yes"
+#~ msgstr "Tak"
+
+#~ msgid "No"
+#~ msgstr "Nie"
+
+#~ msgid "Save"
+#~ msgstr "Zapisz"
+
+#~ msgid "not applicable"
+#~ msgstr "nie dotyczy"
+
+#~ msgid "Saved"
+#~ msgstr "Zapisano"
+
+#~ msgid "Changes have been saved"
+#~ msgstr "Zmiany zostały zapisane"
+
+#~ msgid "Close"
+#~ msgstr "Zamknij"
+
+#~ msgid "Error"
+#~ msgstr "Błąd"
+
+#~ msgid "Event report"
+#~ msgstr "Raport z wydarzenia"
+
+#~ msgid "Event report - team choose"
+#~ msgstr "Raport z wydarzenia - wybór grupy"
+
+#~ msgid "Please choose the team"
+#~ msgstr "Wybierz grupę"
+
+#~ msgid "Sorry, you are not in any team."
+#~ msgstr "Przepraszamy, ale nie jesteś w żadnej grupie."
+
+#~ msgid "You can look up at teams here:"
+#~ msgstr "Możesz obejrzeć grupy tutaj:"
+
+#~ msgid "show all teams"
+#~ msgstr "pokaż wszystkie grupy"
+
+#~ msgid "Update user presence at the event"
+#~ msgstr "Zaktualizuj obecność użytkownika na wydarzeniu"
+
+#~ msgid "Messages"
+#~ msgstr "Wiadomości"
+
+#~ msgid "Write new message"
+#~ msgstr "Utwórz nową wiadomość"
+
+#~ msgid "Refresh messages"
+#~ msgstr "Odśwież wiadomości"
+
+#~ msgid "You"
+#~ msgstr "Ty"
+
+#~ msgid "wrote"
+#~ msgstr "napisał"
+
+#~ msgid "No messages here"
+#~ msgstr "Brak wiadomości"
+
+#~ msgid "You see your report page"
+#~ msgstr "Oglądasz Twój raport"
+
+#~ msgid "You see report page of user"
+#~ msgstr "Oglądasz raport użytkownika"
+
+#~ msgid "Presence at the event"
+#~ msgstr "Obecność na wydarzeniu"
+
+#~ msgid "yes"
+#~ msgstr "tak"
+
+#~ msgid "no"
+#~ msgstr "nie"
+
+#~ msgid "Excused absence at the event"
+#~ msgstr "Usprawiedliwona nieobecność na wydarzeniu"
+
+#~ msgid "Your team rank"
+#~ msgstr "Twoja ranga w grupie"
+
+#~ msgid "Send message"
+#~ msgstr "Wyślij wiadomość"
+
+#~ msgid "Update the event"
+#~ msgstr "Aktualizuj wydarzenie"
+
+#~ msgid "Update"
+#~ msgstr "Aktualizuj"
+
+#~ msgid "Events"
+#~ msgstr "Wydarzenia"
+
+#~ msgid "Report your activity"
+#~ msgstr "Zaraportuj Twoją aktywność"
+
+#~ msgid "Manage team activity"
+#~ msgstr "Zarzadzaj aktywnością grupy"
+
+#~ msgid "Edit event"
+#~ msgstr "Edytuj wydarzenie"
+
+#~ msgid "Delete event"
+#~ msgstr "Usuń wydarzenie"
+
+#~ msgid "Create a team"
+#~ msgstr "Utwórz grupę"
+
+#~ msgid "Created"
+#~ msgstr "Utworzono"
+
+#~ msgid "Users in the team"
+#~ msgstr "Użytkownicy w grupie"
+
+#~ msgid "Users to verify"
+#~ msgstr "Użytkownicy do zweryfikowania"
+
+#~ msgid "Leave the team"
+#~ msgstr "Opuść grupę"
+
+#~ msgid "Cancel join request"
+#~ msgstr "Anuluj prośbę o dołączenie"
+
+#~ msgid "Join the team"
+#~ msgstr "Dołącz do grupy"
+
+#~ msgid "Team management"
+#~ msgstr "Zarządzaj grupą"
+
+#~ msgid "Manage user activity at event"
+#~ msgstr "Zarządzaj aktywnością użytkowników na wydarzeniu"
+
+#~ msgid "Mass activity management"
+#~ msgstr "Masowe zarządzanie aktywnością"
+
+#~ msgid "Teams"
+#~ msgstr "Grupy"
+
+#~ msgid "Informations about team"
+#~ msgstr "Informacje o grupie"
+
+#~ msgid "Sorry, but there are no teams."
+#~ msgstr "Przepraszamy, ale nie ma tutaj żadnej grupy."
+
+#~ msgid "Please confirm your action"
+#~ msgstr "Potwierdź akcje"
+
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+
+#~ msgid "Manage the user join request"
+#~ msgstr "Zarządzaj prośbą użytkownika o dołączenie"
+
+#~ msgid "Do you want to accept user request to the team"
+#~ msgstr "Czy chcesz zaakceptować prośbę o dołączenie uzytkownika do grupy"
+
+#~ msgid "Accept"
+#~ msgstr "Akceptuj"
+
+#~ msgid "Manage the team"
+#~ msgstr "Zarzadzaj grupą"
+
+#~ msgid "Do you want to reject user request to the team"
+#~ msgstr "Czy chcesz odrzucić prośbę użytkownika o dołączenie do grupy"
+
+#~ msgid "Reject"
+#~ msgstr "Odrzuć"
+
+#~ msgid "Do you want to remove user from the team"
+#~ msgstr "Czy chcesz usunąć użytkownika z grupy"
+
+#~ msgid "Join requests"
+#~ msgstr "Prośby o dołączenie"
+
+#~ msgid "Nobody wants to join the team"
+#~ msgstr "Nie ma nowych próśb o dołączenie do grupy"
+
+#~ msgid "Team rank"
+#~ msgstr "Ranga w grupie"
+
+#~ msgid "It is you"
+#~ msgstr "To Ty"
+
+#~ msgid "Nobody is in the team"
+#~ msgstr "W grupie nie ma użytkowników"
+
+#~ msgid "Informations about the team"
+#~ msgstr "Informacje o grupie"
+
+#~ msgid "Join date"
+#~ msgstr "Data dołączenia"
+
+#~ msgid "You are member of global admin group!"
+#~ msgstr "Należysz do globalnej grupy administracyjnej!"
+
+#~ msgid "Logout"
+#~ msgstr "Wyloguj"
+
+#~ msgid "All Events"
+#~ msgstr "Wszystkie wydarzenia"
+
+#~ msgid "Amount"
+#~ msgstr "Liczba"
+
+#~ msgid "not active"
+#~ msgstr "nieaktywny"
+
+#~ msgid "Canceled"
+#~ msgstr "Anulowano"
+
+#~ msgid ""
+#~ "We have sent an e-mail to you for verification. Follow the link provided "
+#~ "to finalize the signup process. Please contact us if you do not receive "
+#~ "it within a few minutes."
+#~ msgstr ""
+#~ "Wysłaliśmy wiadomość na podany przez Ciebie adres e-mail z linkiem "
+#~ "weryfikacyjnym. Jeżeli nie otrzymałeś wiadomości w przeciągu kilkunastu "
+#~ "minut to skontaktuj się z nami."
+
+#~ msgid "Price after discount"
+#~ msgstr "Cena po zniżce"
+
+#~ msgid "TICKET"
+#~ msgstr "BILET"
+
+#~ msgid "E-mail already exists"
+#~ msgstr "E-mail został już użyty"
+
+#~ msgid "Ticket type"
+#~ msgstr "Typ biletu"
+
+#~ msgid "Gender"
+#~ msgstr "Płeć"
+
+#~ msgid "Registration"
+#~ msgstr "Rejestracja"
+
+#~ msgid "Shirt size"
+#~ msgstr "Rozmiar koszulki"
+
+#~ msgid "Shirt type"
+#~ msgstr "Typ koszulki"
+
+#~ msgid "Food"
+#~ msgstr "Jedzenie"
+
+#~ msgid "Wrong uuid given."
+#~ msgstr "Podano niedozwolony uuid"
+
+#~ msgid "You can order maximum"
+#~ msgstr "Możesz zamówić maksymalnie"
+
+#~ msgid "ticket(s)"
+#~ msgstr "bilet(ów)"
+
+#~ msgid "E-mail address used to register."
+#~ msgstr "Adres e-mail użyty do zarejestrowania"
+
+#~ msgid "Processing"
+#~ msgstr "Przetwarzanie"
+
+#~ msgid "Paid"
+#~ msgstr "Zapłacono"
+
+#~ msgid "Men"
+#~ msgstr "Męska"
+
+#~ msgid "Women"
+#~ msgstr "Żeńska"
+
+#~ msgid "active"
+#~ msgstr "aktywny"
+
+#~ msgid "Discount type"
+#~ msgstr "Typ zniżki"
+
+#~ msgid "Discount in percents/currency"
+#~ msgstr "Zniżka w procentach/walucie"
+
+#~ msgid "Discount value type"
+#~ msgstr "Typ zniżki"
+
+#~ msgid "Your form contains errors"
+#~ msgstr "Twój formularz zawiera błędy"
+
+#~ msgid "after discount"
+#~ msgstr "po zniżce"
+
+#~ msgid "T-shirt size"
+#~ msgstr "Rozmiar koszulki"
+
+#~ msgid "Type of shirt"
+#~ msgstr "Typ koszulki"
+
+#~ msgid "Ticket name"
+#~ msgstr "Nazwa biletu"
+
+#~ msgid "Ticket discount"
+#~ msgstr "Zniżka biletu"
+
+#~ msgid "Total price"
+#~ msgstr "Cena całkowita"
+
+#~ msgid "Your events data"
+#~ msgstr "Twoje dane rejestracyjne"
+
+#~ msgid "Register date"
+#~ msgstr "Data rejestracji"
+
+#~ msgid "Name"
+#~ msgstr "Nazwa"
+
+#~ msgid "Price"
+#~ msgstr "Cena"
+
+#~ msgid "Discount information"
+#~ msgstr "Informacje o zniżce"
+
+#~ msgid "Bought time"
+#~ msgstr "Data zakupu"
+
+#~ msgid "Ticket details"
+#~ msgstr "Szczegóły biletu"
+
+#~ msgid "Pay"
+#~ msgstr "Zapłać"
+
+#~ msgid "Unknown state"
+#~ msgstr "Nieznany stan"
+
+#~ msgid "You have not bought a ticket yet"
+#~ msgstr "Nie masz jeszcze żadnych biletów"
+
+#~ msgid "Transfer title"
+#~ msgstr "Tytuł przelewu"
+
+#~ msgid "Recovery account"
+#~ msgstr "Odzyskaj konto"
+
+#~ msgid "Register & go next step"
+#~ msgstr "Zarejestruj i przejdź dalej"
+
+#~ msgid "Lost magic link?"
+#~ msgstr "Chcesz odzyskać konto?"
+
+#~ msgid "Use"
+#~ msgstr "Użyj"
+
+#~ msgid "Tickets"
+#~ msgstr "Bilety"
+
+#~ msgid "Buy"
+#~ msgstr "Kup"
+
+#~ msgid "Comming soon"
+#~ msgstr "Wkrótce"
+
+#~ msgid "Sold"
+#~ msgstr "Sprzedane"
+
+#~ msgid "Discounted price"
+#~ msgstr "Cena zniżkowa"
+
+#~ msgid "Man"
+#~ msgstr "Mężczyzna"
+
+#~ msgid "Woman"
+#~ msgstr "Kobieta"

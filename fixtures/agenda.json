@@ -1,0 +1,234 @@
+[
+  {
+    "model": "agenda.roommodel",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "name": "Room A"
+    }
+  },
+  {
+    "model": "agenda.roommodel",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "name": "Room B"
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "author": "",
+      "description": "<p>Install party</p>",
+      "start_date": "2019-09-28T15:30:00Z",
+      "end_date": "2019-09-28T16:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "author": "Rafa\u0142 Mycielski",
+      "description": "<p>Kubernetes - the hard way<br></p>",
+      "start_date": "2019-09-28T16:00:00Z",
+      "end_date": "2019-09-28T16:45:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "author": "Krzysztof Zubek",
+      "description": "<p>Czym jest potencjalnie niechciane oprogramowanie<br></p>",
+      "start_date": "2019-09-28T17:00:00Z",
+      "end_date": "2019-09-28T17:45:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 5,
+    "fields": {
+      "order": 6,
+      "author": "Konrad Sewi\u0142\u0142o-Jopek",
+      "description": "<p>Wszystko czego (nie) chcia\u0142by\u015b wiedzie\u0107 o SecureBoot.<br></p>",
+      "start_date": "2019-09-28T18:00:00Z",
+      "end_date": "2019-09-28T18:45:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 6,
+    "fields": {
+      "order": 8,
+      "author": "",
+      "description": "<p>Informerzy - Runda 1<br></p>",
+      "start_date": "2019-09-28T19:00:00Z",
+      "end_date": "2019-09-28T19:30:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 7,
+    "fields": {
+      "order": 10,
+      "author": "Mateusz Cedro && Sebastian Urba\u0144ski",
+      "description": "<p>Z historii informatyki: kilka zda\u0144 o tym, dlaczego (X)HTML-owe interfejsy u\u017cytkownika to odgrzewany kotlet<br></p>",
+      "start_date": "2019-09-28T19:45:00Z",
+      "end_date": "2019-09-28T20:30:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 8,
+    "fields": {
+      "order": 11,
+      "author": "",
+      "description": "<p>Informerzy - Runda 2<br></p>",
+      "start_date": "2019-09-28T20:30:00Z",
+      "end_date": "2019-09-28T21:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 9,
+    "fields": {
+      "order": 13,
+      "author": "Janusz Kamie\u0144ski",
+      "description": "<p>docker-compose@localhost dla programist\u00f3w<br></p>",
+      "start_date": "2019-09-28T21:15:00Z",
+      "end_date": "2019-09-28T22:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 10,
+    "fields": {
+      "order": 14,
+      "author": "Konkursmeni",
+      "description": "<p>Outside party: Rzut Laptopem, Curling Dyskiem, Spacer Admina, ...<br></p>",
+      "start_date": "2019-09-28T22:00:00Z",
+      "end_date": "2019-09-28T23:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 11,
+    "fields": {
+      "order": 15,
+      "author": "",
+      "description": "<p>Lightning Talki<br></p>",
+      "start_date": "2019-09-28T23:00:00Z",
+      "end_date": "2019-09-28T23:30:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 12,
+    "fields": {
+      "order": 16,
+      "author": "Dominik \"disconnect3d\" Czarnota",
+      "description": "<p>Bebechy kontener\u00f3w Dockerowych oraz grand theft ucieczki z uprzywilejowanych kontener\u00f3w<br></p>",
+      "start_date": "2019-09-28T23:30:00Z",
+      "end_date": "2019-09-29T00:15:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 13,
+    "fields": {
+      "order": 17,
+      "author": "",
+      "description": "<p>Uninstall party, rozdawanie nagr\u00f3d<br></p>",
+      "start_date": "2019-09-29T00:15:00Z",
+      "end_date": "2019-09-29T01:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 14,
+    "fields": {
+      "order": 18,
+      "author": "Radek",
+      "description": "<p><b>WARSZTATY</b></p>",
+      "start_date": "2019-09-28T18:00:00Z",
+      "end_date": "2019-09-28T21:00:00Z",
+      "room": 2
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 15,
+    "fields": {
+      "order": 3,
+      "author": "PRZERWA",
+      "description": "<p>PRZERWA</p>",
+      "start_date": "2019-09-28T16:45:00Z",
+      "end_date": "2019-09-28T17:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 16,
+    "fields": {
+      "order": 5,
+      "author": "PRZERWA",
+      "description": "<p>PRZERWA</p>",
+      "start_date": "2019-09-28T17:45:00Z",
+      "end_date": "2019-09-28T18:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 17,
+    "fields": {
+      "order": 9,
+      "author": "PRZERWA",
+      "description": "<p>PRZERWA</p>",
+      "start_date": "2019-09-28T19:30:00Z",
+      "end_date": "2019-09-28T19:45:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 18,
+    "fields": {
+      "order": 7,
+      "author": "PRZERWA",
+      "description": "<p>PRZERWA</p>",
+      "start_date": "2019-09-28T18:45:00Z",
+      "end_date": "2019-09-28T19:00:00Z",
+      "room": 1
+    }
+  },
+  {
+    "model": "agenda.lecturemodel",
+    "pk": 19,
+    "fields": {
+      "order": 12,
+      "author": "PRZERWA",
+      "description": "<p>PRZERWA</p>",
+      "start_date": "2019-09-28T21:00:00Z",
+      "end_date": "2019-09-28T21:15:00Z",
+      "room": 1
+    }
+  }
+]

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}AGENDA{% endblock %}
+
+{% block content %}
+
+    <div class="container agenda-div ramka_borderowa_z_alpha">
+        <ul class="nav nav-tabs pb-2" role="tablist"
+            style="border-color: #ef9e25;  border-image: url(/static/img/firewall.gif)">
+            {% for room in rooms %}
+                <li class="nav-item pr-2">
+                    <a style="font-size: 25px;" class="btn btn-warning{% if forloop.first %} active{% endif %}"
+                       data-toggle="tab"
+                       href="#room_{{ room.pk }}">{{ room.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <hr class="firefirefire" style="height: 50px;">
+        <div class="tab-content">
+            {% for room in rooms %}
+                <div id="room_{{ room.pk }}"
+                     class="container room_item tab-pane{% if forloop.first %} active{% endif %}">
+                    {% for lecture in room.lecture_set.all %}
+
+                        <div class="row text-left lecture_item" style="font-size: 20px;">
+                            <div data-start="{{ lecture.start_date|date:'Y-m-d H:i:s' }}"
+                                 data-end="{{ lecture.end_date|date:'Y-m-d H:i:s' }}"
+                                 class="col-2 text-center">
+                                {{ lecture.start_date | time }}
+
+                            </div>
+                            <div class="col-6">
+                                {{ lecture.description | safe }}
+
+                            </div>
+                            <div class="col-4">
+                                {{ lecture.author }}
+
+                            </div>
+                            <div class="col-12 fire_holder"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+
+        function removeFireGifs(fires_to_keep) {
+            let fire_gif_items = document.getElementsByClassName('firefirefire');
+
+            for (let i = 0; i < fire_gif_items.length; i++) {
+                if (!fires_to_keep.includes(fire_gif_items[i])) {
+                    fire_gif_items[i].remove();
+                }
+
+            }
+        }
+
+        function createFireGif() {
+            let fire = document.createElement('hr');
+            fire.className = "firefirefire";
+            return fire;
+        }
+
+        function doMagicWithLectures() {
+            let actual_date = Date.parse(new Date().toISOString());
+            //actual_date = Date.parse('2019-09-28 22:55:08');
+
+            let live_lectures = [];
+            let lecture_items = document.getElementsByClassName('lecture_item');
+            for (let i = 0; i < lecture_items.length; i++) {
+                let lecture_start_time = Date.parse(lecture_items[i].children[0].dataset.start);
+                let lecture_end_time = Date.parse(lecture_items[i].children[0].dataset.end);
+                if (actual_date >= lecture_start_time && lecture_end_time > actual_date) {
+                    live_lectures.push(lecture_items[i]);
+                }
+            }
+            if (live_lectures.length > 0) {
+
+
+                let created_fires = [];
+                for (let i = 0; i < live_lectures.length; i++) {
+                    let file_holder = live_lectures[i].getElementsByClassName('fire_holder')[0];
+                    let fires_in_lecture = file_holder.getElementsByClassName('firefirefire');
+                    if (fires_in_lecture.length === 0) {
+                        let new_fire = createFireGif();
+                        created_fires.push(new_fire);
+                        file_holder.appendChild(new_fire);
+                    } else {
+                        created_fires.push(fires_in_lecture[0]);
+                    }
+                }
+                removeFireGifs(created_fires);
+            }
+
+
+        }
+
+        doMagicWithLectures();
+        setInterval(doMagicWithLectures, 1000);
+
+
+    </script>
+
+
+{% endblock %}
