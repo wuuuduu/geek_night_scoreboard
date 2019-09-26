@@ -5,6 +5,14 @@
 {% block content %}
 
     <div class="container agenda-div ramka_borderowa_z_alpha">
+        {% if page %}
+            <div class="row">
+                <div class="col-12 pb-3">
+                    {{ page.public_content | safe }}
+                </div>
+            </div>
+        {% endif %}
+
         <ul class="nav nav-tabs pb-2" role="tablist"
             style="border-color: #ef9e25;  border-image: url(/static/img/firewall.gif)">
             {% for room in rooms %}

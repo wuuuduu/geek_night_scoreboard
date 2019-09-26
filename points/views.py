@@ -1,19 +1,33 @@
 # Create your views here.
+import logging
+
 from django.contrib import messages
 from django.db import transaction
 from django.views.generic import FormView
 from django_filters.views import FilterView
 
+from pages.models import CMSPage
 from points.filters import ProductFilter
 from points.forms import PointModelForm
 from points.models import PlayerModel, PointModel
 from django.utils.translation import gettext_lazy as _
+
+logger = logging.getLogger(__name__)
 
 
 class AddPointsView(FormView):
     template_name = 'add_points.html'
     form_class = PointModelForm
     success_url = '/points/add/'
+    cms_page_slug = 'points/add'
+
+    def get_context_data(self, **kwargs):
+        context = super(AddPointsView, self).get_context_data(**kwargs)
+        try:
+            context['page'] = CMSPage.objects.get(slug=self.cms_page_slug, visible=True)
+        except CMSPage.DoesNotExist as e:
+            logger.debug('%s (%s)' % (e, self.cms_page_slug))
+        return context
 
     def form_valid(self, form):
         code = form.cleaned_data.get('code')
@@ -49,10 +63,15 @@ class HighScoresView(FilterView):
     template_name = 'highscores.html'
     context_object_name = 'players'
     paginate_by = 20
+    cms_page_slug = 'highscores'
 
     def get_context_data(self, **kwargs):
-        ct = super(HighScoresView, self).get_context_data(**kwargs)
-        return ct
+        context = super(HighScoresView, self).get_context_data(**kwargs)
+        try:
+            context['page'] = CMSPage.objects.get(slug=self.cms_page_slug, visible=True)
+        except CMSPage.DoesNotExist as e:
+            logger.debug('%s (%s)' % (e, self.cms_page_slug))
+        return context
 
 
 high_scores_view = HighScoresView.as_view()

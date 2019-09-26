@@ -8,6 +8,13 @@
 
 {% block content %}
     <div class="container">
+        {% if page %}
+            <div class="row">
+                <div class="col-12 pb-3">
+                    {{ page.public_content | safe }}
+                </div>
+            </div>
+        {% endif %}
         <div class="row pb-3">
             <div class="col-12">
                 <form action="" method="get">
