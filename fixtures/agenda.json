@@ -32,7 +32,7 @@
     "pk": 3,
     "fields": {
       "order": 2,
-      "author": "Rafa\u0142 Mycielski",
+      "author": "Jacek Marmuszewski",
       "description": "<p>Kubernetes - the hard way<br></p>",
       "start_date": "2019-09-28T16:00:00Z",
       "end_date": "2019-09-28T16:45:00Z",

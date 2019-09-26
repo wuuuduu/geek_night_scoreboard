@@ -25,12 +25,18 @@ class CMSPage(models.Model):
         null=False
     )
 
+    visible = models.BooleanField(
+        default=True,
+        null=False
+    )
+
     def save(self, **kwargs):
         self.public_content = clean_html(self.public_content)
         return super(CMSPage, self).save(**kwargs)
 
     def __str__(self):
-        return f'Page: /{self.slug}/'
+        on_or_off = 'online' if self.visible else 'offline'
+        return f'Page: /{self.slug}/ - {on_or_off}'
 
 
 class SponsorsCarousel(OrderedModel):

@@ -39,6 +39,7 @@ pip3 install -r installation/packages/develop.txt
 
 ```bash
 # go to your project dir
+cp .env.development.sample .env.development
 ./manage.py migrate
 ./manage.py createsuperuser
 ./manage.py loaddata fixtures/*.json
