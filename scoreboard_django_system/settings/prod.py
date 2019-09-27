@@ -16,11 +16,12 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASSWORD', ''),
         'HOST': os.environ.get('DB_HOST', None),
         'PORT': os.environ.get('DB_PORT', None),
+        'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
 ALLOWED_HOSTS = [
-    'prod.scoreboard.kernel.dev'
+    'scoreboard.nocinformatyka.pl'
 ]
 RAVEN_CONFIG['dsn'] = os.environ.get('RAVEN_DSN')
 RAVEN_CONFIG['environment'] = 'prod'
