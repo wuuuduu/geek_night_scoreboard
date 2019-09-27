@@ -12,7 +12,7 @@ sudo systemctl start rabbitmq-server
 
 ```mysql
 CREATE USER 'scoreboard_django_system'@'localhost' IDENTIFIED BY 'scoreboard_django_system';
-CREATE DATABASE scoreboard_django_system_local CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE scoreboard_django_system_local CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 GRANT ALL PRIVILEGES ON `scoreboard_django_system%` . * TO 'scoreboard_django_system'@'localhost';
 ```
 
