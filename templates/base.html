@@ -5,19 +5,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/b393632119.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'popper/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'fontawesome/js/all.min.js' %}"></script>
     {% block additional_media %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 <body class="d-flex flex-column">
+<canvas id="c"></canvas>
 <div id="page-content">
     <div style="margin-top: 20px;" id="navbar" class="container">
         <nav class="row navbar navbar-expand-md navbar-dark"
@@ -95,6 +94,6 @@
 {% block extra_js %}
 
 {% endblock %}
-
+<script src="{% static 'js/liczbyJS/efekt_liczby.js' %}"></script>
 </body>
 </html>
