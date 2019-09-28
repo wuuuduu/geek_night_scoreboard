@@ -26,6 +26,11 @@ body {
 }
 
 @font-face {
+    font-family: "Pixeled";
+    src: url('/static/fonts/oswald/Oswald-VariableFont:wght.ttf');
+}
+
+@font-face {
     font-family: BPdotsSquare;
     src: url("/static/fonts/BPdotsSquare.otf") format("opentype");
 }
