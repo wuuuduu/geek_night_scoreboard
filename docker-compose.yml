@@ -1,0 +1,51 @@
+version: "3.4"
+
+x-backend-base: &backend-base
+  build:
+    context: ./backend/
+    dockerfile: ../Dockerfile
+  restart: always
+  networks:
+    - backend
+  volumes:
+    - ./volumes/static:/var/volumes/static/
+    - ./volumes/media:/var/volumes/media/
+    - ./volumes/logs:/var/volumes/logs/
+  env_file:
+    - ./backend/.env
+  environment:
+    STATIC_ROOT: /var/volumes/static
+    MEDIA_ROOT: /var/volumes/media
+    LOGGING_DIR: /var/volumes/logs
+  depends_on:
+    - db
+    - redis
+
+services:
+  db:
+    restart: always
+    image: postgres:13
+    env_file:
+      - ./backend/.env
+    networks:
+      - backend
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data/
+
+  backend:
+    <<: *backend-base
+    command: bash -c "python manage.py migrate && python manage.py collectstatic --noinput && uwsgi --ini config/uwsgi/django-uwsgi.ini --enable-threads"
+    networks:
+      - backend
+      - nginx-proxy
+
+
+  redis:
+    image: redis
+    restart: always
+    networks:
+      - backend
+networks:
+  backend:
+  nginx-proxy:
+    external: true

@@ -11,6 +11,11 @@ celerybeat-schedule
 .env
 .coverage
 htmlcov
-.env.stage
-.env.prod
-.env.development
+.env
+backend/static/
+volumes/postgres/
+volumes/logs/*
+!volumes/logs/.gitkeep
+volumes/static/*
+!volumes/static/.gitkeep
+volumes/media

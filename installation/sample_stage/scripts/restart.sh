@@ -1,3 +1,0 @@
-#!/bin/bash
-sudo supervisorctl restart scoreboard_django_system
-sudo supervisorctl restart scoreboard_django_system_celery
