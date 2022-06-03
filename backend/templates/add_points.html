@@ -28,3 +28,29 @@
         </div>
     </div>
 {% endblock %}
+{% block extra_js %}
+<script>
+    const select = $("#id_acquired_by_player")
+
+    let localStorageUserName = localStorage.getItem("username")
+
+    if (localStorageUserName) {
+        localStorageUserName = localStorageUserName.substring(0, 32)
+    }
+
+    if (localStorageUserName && !select.val()) {
+        if (select.find("option[value='" + localStorageUserName + "']").length) {
+            select.val(localStorageUserName).trigger('change');
+        } else {
+            const newOption = new Option(localStorageUserName, localStorageUserName, true, true);
+            select.append(newOption).trigger('change');
+        }
+    }
+
+    select.on("select2:select", function (e) {
+        const selectedElement = $(e.currentTarget);
+        const value = selectedElement.val();
+        localStorage.setItem("username", value)
+    });
+</script>
+{% endblock %}
