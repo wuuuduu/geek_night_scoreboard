@@ -1,28 +1,24 @@
 import factory
-
-from datetime import timedelta
-
-from django.contrib.auth import get_user_model
-from django.utils.timezone import now
+from factory.django import DjangoModelFactory
 
 from points.models import PlayerModel, TypeOfPointsModel, PointModel
 
 
-class PlayerModelFactory(factory.DjangoModelFactory):
+class PlayerModelFactory(DjangoModelFactory):
     class Meta:
         model = PlayerModel
 
     username = factory.Sequence(lambda n: "username_%d" % n)
 
 
-class TypeOfPointsModelFactory(factory.DjangoModelFactory):
+class TypeOfPointsModelFactory(DjangoModelFactory):
     class Meta:
         model = TypeOfPointsModel
 
     name = factory.Sequence(lambda n: "type_name_%d" % n)
 
 
-class PointModelFactory(factory.DjangoModelFactory):
+class PointModelFactory(DjangoModelFactory):
     class Meta:
         model = PointModel
 

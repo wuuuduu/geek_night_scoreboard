@@ -14,6 +14,7 @@ from points.factories import (
     PointModelFactory,
 )
 from points.forms import PointModelForm
+from points.models import PlayerModel
 
 
 class LectureFormTest(TestCase):
@@ -87,7 +88,7 @@ class PointModelFormTest(TestCase):
         self.points_3 = PointModelFactory(type_of_points=self.type_of_points)
 
     def test_wrong_code(self):
-        data = {"acquired_by_player": self.player.pk, "code": "DOES_NOT_EXIST"}
+        data = {"acquired_by_player": self.player.username, "code": "DOES_NOT_EXIST"}
         form = PointModelForm(data=data)
         self.assertFalse(form.is_valid())
         errors = form.errors.get_json_data()
@@ -98,7 +99,7 @@ class PointModelFormTest(TestCase):
 
     def test_code_used_by_requesting_player(self):
         data = {
-            "acquired_by_player": self.player.pk,
+            "acquired_by_player": self.player.username,
             "code": PointModelFactory(acquired_by_player=self.player).code,
         }
         form = PointModelForm(data=data)
@@ -111,7 +112,7 @@ class PointModelFormTest(TestCase):
 
     def test_code_used_by_other_player(self):
         data = {
-            "acquired_by_player": self.player.pk,
+            "acquired_by_player": self.player.username,
             "code": PointModelFactory(acquired_by_player=self.player_2).code,
         }
         form = PointModelForm(data=data)
@@ -122,17 +123,12 @@ class PointModelFormTest(TestCase):
             "We are sorry, the entered code is already used by someone else!",
         )
 
-    def test_wrong_player(self):
-        data = {"acquired_by_player": 9999, "code": self.points_1.code}
+    def test_get_or_create_player(self):
+        data = {"acquired_by_player": "new-player", "code": self.points_1.code}
         form = PointModelForm(data=data)
-        self.assertFalse(form.is_valid())
-        errors = form.errors.get_json_data()
-        self.assertEqual(
-            errors["acquired_by_player"][0]["message"],
-            "Select a valid choice. That choice is not one of the available choices.",
-        )
+        self.assertTrue(form.is_valid())
 
     def test_correct_request(self):
-        data = {"acquired_by_player": self.player.pk, "code": self.points_1.code}
+        data = {"acquired_by_player": self.player.username, "code": self.points_1.code}
         form = PointModelForm(data=data)
         self.assertTrue(form.is_valid())

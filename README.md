@@ -13,3 +13,8 @@ cp sample.env .env
 ...edit .env
 python3 manage.py runserver
 ```
+
+```bash
+# tests
+python3 manage.py test --settings=config.settings.base
+```

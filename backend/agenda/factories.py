@@ -4,11 +4,12 @@ from datetime import timedelta
 
 from django.contrib.auth import get_user_model
 from django.utils.timezone import now
+from factory.django import DjangoModelFactory
 
 from agenda.models import RoomModel, LectureModel
 
 
-class UserFactory(factory.DjangoModelFactory):
+class UserFactory(DjangoModelFactory):
     class Meta:
         model = get_user_model()
 
@@ -23,14 +24,14 @@ class UserFactory(factory.DjangoModelFactory):
         self.set_password(self.password)
 
 
-class RoomModelFactory(factory.DjangoModelFactory):
+class RoomModelFactory(DjangoModelFactory):
     class Meta:
         model = RoomModel
 
     name = factory.Sequence(lambda n: "room_%d" % n)
 
 
-class LectureModelFactory(factory.DjangoModelFactory):
+class LectureModelFactory(DjangoModelFactory):
     class Meta:
         model = LectureModel
 

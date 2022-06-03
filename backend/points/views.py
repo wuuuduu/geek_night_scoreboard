@@ -31,13 +31,16 @@ class AddPointsView(FormView):
 
     def form_valid(self, form):
         code = form.cleaned_data.get("code")
-        player = form.cleaned_data.get("acquired_by_player")
+        player_name = form.cleaned_data.get("acquired_by_player")
         with transaction.atomic():
+            player, player_created = PlayerModel.objects.get_or_create(
+                username=player_name
+            )
             point: PointModel = PointModel.objects.select_for_update().get(
                 code=code, acquired_by_player__isnull=True
             )
             point.acquired_by_player = player
-            point.save()
+            point.save(update_fields=["acquired_by_player"])
         messages.add_message(
             self.request,
             messages.SUCCESS,
