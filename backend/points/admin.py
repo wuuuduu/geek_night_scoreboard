@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.db.models import Sum
 from django.db.models.functions import Coalesce
-from django.utils.translation import gettext_lazy as _
 
 from points.models import PointModel, PlayerModel, TypeOfPointsModel
 
@@ -34,6 +33,31 @@ class PlayerModelAdmin(admin.ModelAdmin):
 
 
 class PointModelAdmin(admin.ModelAdmin):
+    class IsAcquiredByPlayerFilter(admin.SimpleListFilter):
+        title = "Is acquired by player"
+        parameter_name = "is_acquired_by_player"
+
+        def value(self):
+            value = super().value()
+            if value == "1":
+                return True
+            elif value == "0":
+                return False
+            elif value is not None:
+                raise ValueError()
+
+        def lookups(self, request, model_admin):
+            return (
+                ("1", "True"),
+                ("0", "False"),
+            )
+
+        def queryset(self, request, queryset):
+            value = self.value()
+            if value is not None:
+                return queryset.filter(acquired_by_player__isnull=not value)
+            return queryset
+
     search_fields = (
         "code",
         "value",
@@ -41,12 +65,17 @@ class PointModelAdmin(admin.ModelAdmin):
         "type_of_points__name",
         "description",
     )
-    list_filter = ("value",)
+    list_filter = (
+        "type_of_points__name",
+        IsAcquiredByPlayerFilter,
+        "value",
+        "acquired_by_player__username",
+    )
     list_display = (
         "code",
+        "type_of_points",
         "value",
         "acquired_by_player",
-        "type_of_points",
         "description",
     )
 
