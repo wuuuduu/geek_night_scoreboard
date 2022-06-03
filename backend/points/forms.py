@@ -14,6 +14,7 @@ class CustomSelect2TagWidget(Select2Widget):
         default_attrs = {
             "data-minimum-input-length": 1,
             "data-tags": "true",
+            "data-maximum-input-length": 32,
         }
         default_attrs.update(base_attrs)
         return super().build_attrs(default_attrs, extra_attrs=extra_attrs)
