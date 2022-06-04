@@ -31,6 +31,7 @@ class LectureAdmin(OrderedModelAdmin):
     list_display = (
         "change",
         "author",
+        "description",
         "room",
         "start_date",
         "end_date",
